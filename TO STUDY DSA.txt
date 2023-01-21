@@ -1,0 +1,4 @@
+1) Pigeon hole principle
+2) Catalan number
+3) Inclusion - Exclusion principle
+4) Factorial of a number using modulo

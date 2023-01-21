@@ -1,0 +1,103 @@
+METHOD
+
+We Built this notes android application from scratch using Java technology and Android studio. No prebuilt modules were used to develop this app.
+
+Talking about GUI, firstly we used RecyclerView in the home activity of the app to show various notes in the List having two columns in each row. To connect RecyclerView with each of its dynamic items. We initialised the RecyclerAdapter constructor in MainActivity.class to pass the .txt files to RecyclerAdapter class so that the later class may function dynamically. We used RecyclerAdapter custom made Java Class, in RecyclerAdapter class, we also defined a static class Holder which contained variables to refer to ImageView and TextView in each Note List Item. MainActivity.java was referring to activity_main.xml and Holder class nested inside RecyclerAdapter was referring to eachnote.xml file which was the layout of each note list item shown on Home Page.
+
+There was only one default method used in MainAcitivity.java class which was  protected void onCreate(Bundle savedInstanceState).
+The variables used in MainActivity class are recyclerView and button.
+
+
+Methods used in RecyclerAdapter Class
+
+Firstly we defined a Constructor of RecyclerAdapter class which was used to initialize the required variables:- context and arrayList.
+
+We overrride the three methods in RecyclerAdapter class whose origin was RecyclerView.Adapter<> Class. Rest methods were predefined excluding one which is user defined method. The methods are:
+
+1) public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) 
+2) public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position)
+3) public int getItemCount()
+4) add()
+5) nextInt()
+6) size()
+7) get()
+8) findViewById()
+9) getAdapterPosition()
+10) onClick()
+11) onLongClick()
+12) setOnClickListener()
+13) setOnLongClickListener()
+14) putExtra()
+15) startActivity()
+16) getFilesDir()
+17) list()
+18) getAbsolutePath()
+19) remove()
+20) notifyItemRemoved()
+21) notifyItemRangeChanged()
+22) getContext()
+23) inflate()
+24) from()
+25) setText()
+
+We also defined our own method in order to get random background color to show on each note list item on the home page of our app.
+Method is :- private int getRandomColor()
+
+Lastly the RecyclerAdapter class contained one Holder static class whose constructor initialised the GUI textView and imageView variables.
+
+We then linked that Custom made RecyclerAdapter java class with Layout file(which is actually the GUI Component). 
+For Adding or Editing the Note, we made two more classes:- AddNotes.java and EditNotes.java, there were activity_add_notes.xml and activity_edit_notes.xml corresponding to both the java classes which were basically connecting the java class variables with the GUI Resource File (.xml) to actually refer to the GUI components(Two EditText variables, one Button and one Constraint Layout each being used in both EditNotes and AddNotes class) and add functionality to them. 
+
+Talking about methods,
+Methods in EditNotes java class
+
+1) protected void onCreate(Bundle savedInstanceState)
+2) findViewById(R.id.Id_of_component)
+3) setContentView(R.layout.layout_activity_xml)
+4) getIntent()
+5) setText("Some text")
+6) setBackgroundColor(color)
+7) getStringExtra()
+8) getIntExtra()
+9) openFileInput(file path)
+10) close()
+11) getFilesDir()
+12) openFileOutput(file path)
+13) write(byte[])
+14) show()
+15) printStackTrace()
+16) startActivity()
+17) makeText()
+18) toString()
+19) trim()
+20) isEmpty()
+21) getBytes()
+22) setOnClickListener()
+23) onClickListener()
+
+Methods in AddNotes java class
+
+1) protected void onCreate(Bundle savedInstanceState)
+2) findViewById(R.id.Id_of_component)
+3) setContentView(R.layout.layout_activity_xml)
+5) setText("Some text")
+6) close()
+7) getFilesDir()
+8) openFileOutput(file path)
+9) write(byte[])
+10) show()
+11) printStackTrace()
+12) startActivity()
+13) makeText()
+14) toString()
+15) trim()
+16) isEmpty()
+17) getBytes()
+18) setOnClickListener()
+19) onClickListener()
+
+
+
+
+
+
